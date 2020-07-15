@@ -1,0 +1,683 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B543084524B84B750096BEC2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B543084424B84B750096BEC2 /* HealthKit.framework */; };
+		B543084924B84B960096BEC2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B543084824B84B960096BEC2 /* HealthKit.framework */; };
+		B551FF3924B728B400D97F03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B551FF3824B728B400D97F03 /* AppDelegate.swift */; };
+		B551FF3B24B728B400D97F03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B551FF3A24B728B400D97F03 /* SceneDelegate.swift */; };
+		B551FF3D24B728B400D97F03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B551FF3C24B728B400D97F03 /* ViewController.swift */; };
+		B551FF4024B728B400D97F03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B551FF3E24B728B400D97F03 /* Main.storyboard */; };
+		B551FF4224B728B600D97F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B551FF4124B728B600D97F03 /* Assets.xcassets */; };
+		B551FF4524B728B600D97F03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B551FF4324B728B600D97F03 /* LaunchScreen.storyboard */; };
+		B551FF4A24B728B600D97F03 /* SensorTracker WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B551FF4924B728B600D97F03 /* SensorTracker WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B551FF5024B728B600D97F03 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B551FF4E24B728B600D97F03 /* Interface.storyboard */; };
+		B551FF5224B728B700D97F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B551FF5124B728B700D97F03 /* Assets.xcassets */; };
+		B551FF5924B728B700D97F03 /* SensorTracker WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B551FF5824B728B700D97F03 /* SensorTracker WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B551FF5E24B728B700D97F03 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B551FF5D24B728B700D97F03 /* InterfaceController.swift */; };
+		B551FF6024B728B700D97F03 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B551FF5F24B728B700D97F03 /* ExtensionDelegate.swift */; };
+		B551FF6224B728B700D97F03 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B551FF6124B728B700D97F03 /* NotificationController.swift */; };
+		B551FF6424B728B800D97F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B551FF6324B728B800D97F03 /* Assets.xcassets */; };
+		B5E355EA24BD9EA700257D89 /* FileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E355E924BD9EA700257D89 /* FileDataManager.swift */; };
+		B5EF635024B7FCEF009B7B97 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EF634F24B7FCEF009B7B97 /* MotionManager.swift */; };
+		B5EF635224B81C57009B7B97 /* DataCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EF635124B81C57009B7B97 /* DataCommunicator.swift */; };
+		B5EF635424B81CE7009B7B97 /* MotionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EF635324B81CE7009B7B97 /* MotionData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B551FF4B24B728B600D97F03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B551FF2D24B728B400D97F03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B551FF4824B728B600D97F03;
+			remoteInfo = "SensorTracker WatchKit App";
+		};
+		B551FF5A24B728B700D97F03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B551FF2D24B728B400D97F03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B551FF5724B728B700D97F03;
+			remoteInfo = "SensorTracker WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B551FF6C24B728B800D97F03 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B551FF5924B728B700D97F03 /* SensorTracker WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B551FF7024B728B800D97F03 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				B551FF4A24B728B600D97F03 /* SensorTracker WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B543084224B84B750096BEC2 /* SensorTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SensorTracker.entitlements; sourceTree = "<group>"; };
+		B543084424B84B750096BEC2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		B543084624B84B860096BEC2 /* SensorTracker WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SensorTracker WatchKit App.entitlements"; sourceTree = "<group>"; };
+		B543084724B84B960096BEC2 /* SensorTracker WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SensorTracker WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		B543084824B84B960096BEC2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		B551FF3524B728B400D97F03 /* SensorTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensorTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B551FF3824B728B400D97F03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B551FF3A24B728B400D97F03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B551FF3C24B728B400D97F03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B551FF3F24B728B400D97F03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B551FF4124B728B600D97F03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B551FF4424B728B600D97F03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B551FF4624B728B600D97F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B551FF4924B728B600D97F03 /* SensorTracker WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SensorTracker WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B551FF4F24B728B600D97F03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		B551FF5124B728B700D97F03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B551FF5324B728B700D97F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B551FF5824B728B700D97F03 /* SensorTracker WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SensorTracker WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B551FF5D24B728B700D97F03 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		B551FF5F24B728B700D97F03 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		B551FF6124B728B700D97F03 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		B551FF6324B728B800D97F03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B551FF6524B728B800D97F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B551FF6624B728B800D97F03 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		B5E355E924BD9EA700257D89 /* FileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDataManager.swift; sourceTree = "<group>"; };
+		B5EF634F24B7FCEF009B7B97 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		B5EF635124B81C57009B7B97 /* DataCommunicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCommunicator.swift; sourceTree = "<group>"; };
+		B5EF635324B81CE7009B7B97 /* MotionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B551FF3224B728B400D97F03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B543084524B84B750096BEC2 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B551FF5524B728B700D97F03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B543084924B84B960096BEC2 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B543084324B84B750096BEC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B543084824B84B960096BEC2 /* HealthKit.framework */,
+				B543084424B84B750096BEC2 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B551FF2C24B728B400D97F03 = {
+			isa = PBXGroup;
+			children = (
+				B551FF3724B728B400D97F03 /* SensorTracker */,
+				B551FF4D24B728B600D97F03 /* SensorTracker WatchKit App */,
+				B551FF5C24B728B700D97F03 /* SensorTracker WatchKit Extension */,
+				B551FF3624B728B400D97F03 /* Products */,
+				B543084324B84B750096BEC2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B551FF3624B728B400D97F03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B551FF3524B728B400D97F03 /* SensorTracker.app */,
+				B551FF4924B728B600D97F03 /* SensorTracker WatchKit App.app */,
+				B551FF5824B728B700D97F03 /* SensorTracker WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B551FF3724B728B400D97F03 /* SensorTracker */ = {
+			isa = PBXGroup;
+			children = (
+				B543084224B84B750096BEC2 /* SensorTracker.entitlements */,
+				B551FF3824B728B400D97F03 /* AppDelegate.swift */,
+				B551FF3A24B728B400D97F03 /* SceneDelegate.swift */,
+				B551FF3C24B728B400D97F03 /* ViewController.swift */,
+				B5E355E924BD9EA700257D89 /* FileDataManager.swift */,
+				B551FF3E24B728B400D97F03 /* Main.storyboard */,
+				B551FF4124B728B600D97F03 /* Assets.xcassets */,
+				B551FF4324B728B600D97F03 /* LaunchScreen.storyboard */,
+				B551FF4624B728B600D97F03 /* Info.plist */,
+			);
+			path = SensorTracker;
+			sourceTree = "<group>";
+		};
+		B551FF4D24B728B600D97F03 /* SensorTracker WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				B543084624B84B860096BEC2 /* SensorTracker WatchKit App.entitlements */,
+				B551FF4E24B728B600D97F03 /* Interface.storyboard */,
+				B551FF5124B728B700D97F03 /* Assets.xcassets */,
+				B551FF5324B728B700D97F03 /* Info.plist */,
+			);
+			path = "SensorTracker WatchKit App";
+			sourceTree = "<group>";
+		};
+		B551FF5C24B728B700D97F03 /* SensorTracker WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B543084724B84B960096BEC2 /* SensorTracker WatchKit Extension.entitlements */,
+				B551FF5D24B728B700D97F03 /* InterfaceController.swift */,
+				B5EF634F24B7FCEF009B7B97 /* MotionManager.swift */,
+				B5EF635124B81C57009B7B97 /* DataCommunicator.swift */,
+				B5EF635324B81CE7009B7B97 /* MotionData.swift */,
+				B551FF5F24B728B700D97F03 /* ExtensionDelegate.swift */,
+				B551FF6124B728B700D97F03 /* NotificationController.swift */,
+				B551FF6324B728B800D97F03 /* Assets.xcassets */,
+				B551FF6524B728B800D97F03 /* Info.plist */,
+				B551FF6624B728B800D97F03 /* PushNotificationPayload.apns */,
+			);
+			path = "SensorTracker WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B551FF3424B728B400D97F03 /* SensorTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B551FF7124B728B800D97F03 /* Build configuration list for PBXNativeTarget "SensorTracker" */;
+			buildPhases = (
+				B551FF3124B728B400D97F03 /* Sources */,
+				B551FF3224B728B400D97F03 /* Frameworks */,
+				B551FF3324B728B400D97F03 /* Resources */,
+				B551FF7024B728B800D97F03 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B551FF4C24B728B600D97F03 /* PBXTargetDependency */,
+			);
+			name = SensorTracker;
+			productName = SensorTracker;
+			productReference = B551FF3524B728B400D97F03 /* SensorTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B551FF4824B728B600D97F03 /* SensorTracker WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B551FF6D24B728B800D97F03 /* Build configuration list for PBXNativeTarget "SensorTracker WatchKit App" */;
+			buildPhases = (
+				B551FF4724B728B600D97F03 /* Resources */,
+				B551FF6C24B728B800D97F03 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B551FF5B24B728B700D97F03 /* PBXTargetDependency */,
+			);
+			name = "SensorTracker WatchKit App";
+			productName = "SensorTracker WatchKit App";
+			productReference = B551FF4924B728B600D97F03 /* SensorTracker WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		B551FF5724B728B700D97F03 /* SensorTracker WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B551FF6924B728B800D97F03 /* Build configuration list for PBXNativeTarget "SensorTracker WatchKit Extension" */;
+			buildPhases = (
+				B551FF5424B728B700D97F03 /* Sources */,
+				B551FF5524B728B700D97F03 /* Frameworks */,
+				B551FF5624B728B700D97F03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SensorTracker WatchKit Extension";
+			productName = "SensorTracker WatchKit Extension";
+			productReference = B551FF5824B728B700D97F03 /* SensorTracker WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B551FF2D24B728B400D97F03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					B551FF3424B728B400D97F03 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					B551FF4824B728B600D97F03 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					B551FF5724B728B700D97F03 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = B551FF3024B728B400D97F03 /* Build configuration list for PBXProject "SensorTracker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B551FF2C24B728B400D97F03;
+			productRefGroup = B551FF3624B728B400D97F03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B551FF3424B728B400D97F03 /* SensorTracker */,
+				B551FF4824B728B600D97F03 /* SensorTracker WatchKit App */,
+				B551FF5724B728B700D97F03 /* SensorTracker WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B551FF3324B728B400D97F03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B551FF4524B728B600D97F03 /* LaunchScreen.storyboard in Resources */,
+				B551FF4224B728B600D97F03 /* Assets.xcassets in Resources */,
+				B551FF4024B728B400D97F03 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B551FF4724B728B600D97F03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B551FF5224B728B700D97F03 /* Assets.xcassets in Resources */,
+				B551FF5024B728B600D97F03 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B551FF5624B728B700D97F03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B551FF6424B728B800D97F03 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B551FF3124B728B400D97F03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E355EA24BD9EA700257D89 /* FileDataManager.swift in Sources */,
+				B551FF3D24B728B400D97F03 /* ViewController.swift in Sources */,
+				B551FF3924B728B400D97F03 /* AppDelegate.swift in Sources */,
+				B551FF3B24B728B400D97F03 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B551FF5424B728B700D97F03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B551FF6224B728B700D97F03 /* NotificationController.swift in Sources */,
+				B5EF635424B81CE7009B7B97 /* MotionData.swift in Sources */,
+				B551FF6024B728B700D97F03 /* ExtensionDelegate.swift in Sources */,
+				B551FF5E24B728B700D97F03 /* InterfaceController.swift in Sources */,
+				B5EF635224B81C57009B7B97 /* DataCommunicator.swift in Sources */,
+				B5EF635024B7FCEF009B7B97 /* MotionManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B551FF4C24B728B600D97F03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B551FF4824B728B600D97F03 /* SensorTracker WatchKit App */;
+			targetProxy = B551FF4B24B728B600D97F03 /* PBXContainerItemProxy */;
+		};
+		B551FF5B24B728B700D97F03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B551FF5724B728B700D97F03 /* SensorTracker WatchKit Extension */;
+			targetProxy = B551FF5A24B728B700D97F03 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B551FF3E24B728B400D97F03 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B551FF3F24B728B400D97F03 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B551FF4324B728B600D97F03 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B551FF4424B728B600D97F03 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B551FF4E24B728B600D97F03 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B551FF4F24B728B600D97F03 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B551FF6724B728B800D97F03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B551FF6824B728B800D97F03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		B551FF6A24B728B800D97F03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "SensorTracker WatchKit Extension/SensorTracker WatchKit Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SBDZF5746;
+				INFOPLIST_FILE = "SensorTracker WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = newWatchApp.newWatchApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		B551FF6B24B728B800D97F03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "SensorTracker WatchKit Extension/SensorTracker WatchKit Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SBDZF5746;
+				INFOPLIST_FILE = "SensorTracker WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = newWatchApp.newWatchApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		B551FF6E24B728B800D97F03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SensorTracker WatchKit App/SensorTracker WatchKit App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SBDZF5746;
+				IBSC_MODULE = SensorTracker_WatchKit_Extension;
+				INFOPLIST_FILE = "SensorTracker WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = newWatchApp.newWatchApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		B551FF6F24B728B800D97F03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SensorTracker WatchKit App/SensorTracker WatchKit App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SBDZF5746;
+				IBSC_MODULE = SensorTracker_WatchKit_Extension;
+				INFOPLIST_FILE = "SensorTracker WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = newWatchApp.newWatchApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		B551FF7224B728B800D97F03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SensorTracker/SensorTracker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SBDZF5746;
+				INFOPLIST_FILE = SensorTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = newWatchApp.newWatchApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B551FF7324B728B800D97F03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SensorTracker/SensorTracker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SBDZF5746;
+				INFOPLIST_FILE = SensorTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = newWatchApp.newWatchApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B551FF3024B728B400D97F03 /* Build configuration list for PBXProject "SensorTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B551FF6724B728B800D97F03 /* Debug */,
+				B551FF6824B728B800D97F03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B551FF6924B728B800D97F03 /* Build configuration list for PBXNativeTarget "SensorTracker WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B551FF6A24B728B800D97F03 /* Debug */,
+				B551FF6B24B728B800D97F03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B551FF6D24B728B800D97F03 /* Build configuration list for PBXNativeTarget "SensorTracker WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B551FF6E24B728B800D97F03 /* Debug */,
+				B551FF6F24B728B800D97F03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B551FF7124B728B800D97F03 /* Build configuration list for PBXNativeTarget "SensorTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B551FF7224B728B800D97F03 /* Debug */,
+				B551FF7324B728B800D97F03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B551FF2D24B728B400D97F03 /* Project object */;
+}
