@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var fileNameTF: UITextField!
     @IBOutlet weak var folderManagerBtn: UIButton!
     @IBOutlet weak var mainBtn: UIButton!
+    @IBOutlet weak var deviceNameBtn: UIButton!
+    
+    var tap: UITapGestureRecognizer?
     
     var watchSession: WCSession?
     var watchRunning = false
@@ -32,6 +35,9 @@ class ViewController: UIViewController {
         folderManagerBtn.contentHorizontalAlignment = .fill
         
         fileDataManager.delegate = self
+        tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        tap!.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap!)
         
         let mainBtnLongPress = UILongPressGestureRecognizer(target: self, action: #selector(saveDataToCSV(_:)))
         mainBtn.addGestureRecognizer(mainBtnLongPress)
@@ -77,6 +83,21 @@ class ViewController: UIViewController {
         fileNameTF.isEnabled = true
     }
     
+    @IBAction func deviceNameBtnPressed(_ sender: Any) {
+        guard watchSession?.isReachable == true else {
+            let alert = UIAlertController(title: "Watch error", message: "Watch is not reachable, please wake or restart the app on watch", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+            self.present(alert, animated: true)
+            return
+        }
+        watchSession?.sendMessage(["watchName": true], replyHandler: {[unowned self] message in
+            let watchName = message["watchName"] as! String
+            DispatchQueue.main.async {
+                self.deviceNameBtn.setTitle(watchName, for: .normal)
+            }
+        }, errorHandler: nil)
+    }
+    
     @IBAction func mainBtnPressed(_ sender: Any) {
         guard watchSession?.isReachable == true else {
             let alert = UIAlertController(title: "Watch error", message: "Watch is not reachable, please wake or restart the app on watch", preferredStyle: .alert)
@@ -87,9 +108,9 @@ class ViewController: UIViewController {
         watchSession?.sendMessage(["startSensor": !watchRunning], replyHandler: {[unowned self] message in
             let watchStatus = message["watchRunning"] as! Bool
             if watchStatus {
-                fileDataManager.dataString = ""
+                self.fileDataManager.dataString = ""
                 DispatchQueue.main.async {
-                    UIView.transition(with: mainBtn, duration: 0.2, options: .curveEaseIn, animations: { [unowned self] in
+                    UIView.transition(with: self.mainBtn, duration: 0.2, options: .curveEaseIn, animations: { [unowned self] in
                         self.mainBtn.tintColor = .systemRed
                         self.mainBtn.setImage(UIImage(systemName: "smallcircle.fill.circle"), for: .normal)
                         self.guideLbl.text = "Tap to stop"
@@ -98,14 +119,14 @@ class ViewController: UIViewController {
             }
             else {
                 DispatchQueue.main.async {
-                    UIView.transition(with: mainBtn, duration: 0.2, options: .curveEaseIn, animations: { [unowned self] in
+                    UIView.transition(with: self.mainBtn, duration: 0.2, options: .curveEaseIn, animations: { [unowned self] in
                         self.mainBtn.tintColor = .systemGreen
                         self.mainBtn.setImage(UIImage(systemName: "largecircle.fill.circle"), for: .normal)
                         self.guideLbl.text = "Tap to start, long press to save"
                     })
                 }
             }
-            watchRunning = watchStatus
+            self.watchRunning = watchStatus
         }, errorHandler: nil)
     }
     
@@ -211,6 +232,7 @@ extension ViewController: FileDataManagerDelegate {
             UIView.transition(with: self.mainBtn, duration: 0.2, options: .curveEaseIn, animations: { [unowned self] in
                 self.mainBtn.tintColor = .systemGreen
                 self.mainBtn.setImage(UIImage(systemName: "largecircle.fill.circle"), for: .normal)
+                self.guideLbl.text = "Tap to start"
             })
             let alert = UIAlertController(title: "Done", message: "Data has been written to \(self.fileNameTF.text ?? "").csv", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))

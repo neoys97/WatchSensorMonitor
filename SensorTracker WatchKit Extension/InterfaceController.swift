@@ -15,7 +15,10 @@ import HealthKit
 class InterfaceController: WKInterfaceController {
 
     @IBOutlet weak var sessionStatusLbl: WKInterfaceLabel!
-    @IBOutlet weak var reachabilityLbl: WKInterfaceLabel!
+    @IBOutlet weak var nameLabel: WKInterfaceLabel!
+    //    @IBOutlet weak var reachabilityLbl: WKInterfaceLabel!
+    
+    let deviceInterface = WKInterfaceDevice.current()
     var motionManager: MotionManager!
     var communicator: DataCommunicator!
     let session = WCSession.default
@@ -25,6 +28,8 @@ class InterfaceController: WKInterfaceController {
     var healthKitTypesToRead: Set<HKObjectType> =  [HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.distanceWalkingRunning)!]
     var healthKitTypesToWrite = Set<HKSampleType>()
     let workoutConfiguration = HKWorkoutConfiguration()
+    
+    var currentName = ""
     
     override func awake(withContext context: Any?) {
         // Configure interface objects here.
@@ -39,29 +44,35 @@ class InterfaceController: WKInterfaceController {
         healthStore.requestAuthorization(toShare: healthKitTypesToWrite, read: healthKitTypesToRead) { (success, error) -> Void in
             print ("authorised")
         }
-        if session.isReachable {
-            reachabilityLbl.setText("App reachable")
+//        if session.isReachable {
+//            reachabilityLbl.setText("App reachable")
+//        }
+//        else {
+//            reachabilityLbl.setText("App unreachable")
+//        }
+        if deviceInterface.wristLocation == .left {
+            currentName = randomString(length: 4) + "-Left"
         }
         else {
-            reachabilityLbl.setText("App unreachable")
+            currentName = randomString(length: 4) + "-Right"
         }
+        nameLabel.setText(currentName)
     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
-        if session.isReachable {
-            reachabilityLbl.setText("App reachable")
-        }
-        else {
-            reachabilityLbl.setText("App unreachable")
-        }
+        
     }
     
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         print("close")
     }
-
+    
+    func randomString(length: Int) -> String {
+      let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+      return String((0..<length).map{ _ in letters.randomElement()! })
+    }
     
 }
 
@@ -72,36 +83,42 @@ extension InterfaceController: WCSessionDelegate {
     }
 
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-        let startSensor = message["startSensor"] as! Bool
-        print (startSensor)
-        if startSensor {
-            do {
-                keepAliveSession = try HKWorkoutSession(healthStore: healthStore, configuration: workoutConfiguration)
-            }
-            catch {
-                fatalError("Unable to create the workout session!")
-            }
-            sessionStatusLbl.setText("Activated running")
-            keepAliveSession!.startActivity(with: Date())
-            motionManager.startSensors()
-            replyHandler(["watchRunning": true])
+        if let _ = message["watchName"] as? Bool {
+            replyHandler(["watchName": currentName])
         }
-        else {
-            sessionStatusLbl.setText("Activated idle")
-            keepAliveSession!.stopActivity(with: Date())
-            keepAliveSession!.end()
-            keepAliveSession = nil
-            motionManager.stopSensors()
-            replyHandler(["watchRunning": false])
+        else if let startSensor = message["startSensor"] as? Bool {
+            print (startSensor)
+            if startSensor {
+                do {
+                    keepAliveSession = try HKWorkoutSession(healthStore: healthStore, configuration: workoutConfiguration)
+                }
+                catch {
+                    fatalError("Unable to create the workout session!")
+                }
+                sessionStatusLbl.setText("Activated running")
+                keepAliveSession!.startActivity(with: Date())
+                motionManager.startSensors()
+                replyHandler(["watchRunning": true])
+            }
+            else {
+                sessionStatusLbl.setText("Activated idle")
+                keepAliveSession!.stopActivity(with: Date())
+                keepAliveSession!.end()
+                keepAliveSession = nil
+                motionManager.stopSensors()
+                replyHandler(["watchRunning": false])
+            }
         }
     }
     
     func sessionReachabilityDidChange(_ session: WCSession) {
         if (session.isReachable) {
-            reachabilityLbl.setText("App reachable")
+//            reachabilityLbl.setText("App reachable")
+            print("App reachable")
         }
         else {
-            reachabilityLbl.setText("App unreachable")
+//            reachabilityLbl.setText("App unreachable")
+            print("App unreachable")
         }
     }
 }

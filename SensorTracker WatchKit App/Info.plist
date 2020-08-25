@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>newWatchApp.newWatchApp</string>
+	<string>eeeSensorTracker.SensorTracker</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

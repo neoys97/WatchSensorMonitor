@@ -509,14 +509,14 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "SensorTracker WatchKit Extension/SensorTracker WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7SBDZF5746;
+				DEVELOPMENT_TEAM = 2TZVS957F4;
 				INFOPLIST_FILE = "SensorTracker WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = newWatchApp.newWatchApp.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = eeeSensorTracker.SensorTracker.watchkitapp.extension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -532,14 +532,14 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "SensorTracker WatchKit Extension/SensorTracker WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7SBDZF5746;
+				DEVELOPMENT_TEAM = 2TZVS957F4;
 				INFOPLIST_FILE = "SensorTracker WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = newWatchApp.newWatchApp.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = eeeSensorTracker.SensorTracker.watchkitapp.extension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -558,10 +558,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SensorTracker WatchKit App/SensorTracker WatchKit App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7SBDZF5746;
+				DEVELOPMENT_TEAM = 2TZVS957F4;
 				IBSC_MODULE = SensorTracker_WatchKit_Extension;
 				INFOPLIST_FILE = "SensorTracker WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = newWatchApp.newWatchApp.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = eeeSensorTracker.SensorTracker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -579,10 +579,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SensorTracker WatchKit App/SensorTracker WatchKit App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7SBDZF5746;
+				DEVELOPMENT_TEAM = 2TZVS957F4;
 				IBSC_MODULE = SensorTracker_WatchKit_Extension;
 				INFOPLIST_FILE = "SensorTracker WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = newWatchApp.newWatchApp.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = eeeSensorTracker.SensorTracker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -600,14 +600,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SensorTracker/SensorTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7SBDZF5746;
+				DEVELOPMENT_TEAM = 2TZVS957F4;
 				INFOPLIST_FILE = SensorTracker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = newWatchApp.newWatchApp;
+				PRODUCT_BUNDLE_IDENTIFIER = eeeSensorTracker.SensorTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -622,14 +622,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SensorTracker/SensorTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7SBDZF5746;
+				DEVELOPMENT_TEAM = 2TZVS957F4;
 				INFOPLIST_FILE = SensorTracker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = newWatchApp.newWatchApp;
+				PRODUCT_BUNDLE_IDENTIFIER = eeeSensorTracker.SensorTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
